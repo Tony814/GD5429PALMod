@@ -1,0 +1,23 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Tue Jan 14 02:51:58 2020
+
+LISTING FOR SIMULATION FILE: LINEARADDRMOD.si
+
+   1: Name     LinearAddrMod;
+   2: PartNo   ATF16V8C;
+   3: Date     1/12/2020;
+   4: Revision 01;
+                 ^
+[0025sa] Please note: inconsistent header information
+
+   5: Designer Me;
+   6: Company  Me;
+   7: Assembly GD5429;
+   8: Location U22;
+   9: Device   g16v8a;
+  10: 
+  11: 
+  12: ORDER: !27c256_OE, !5429_UADDR, !5429_EROM, !ISA_SMEMR, VLB_A23, VLB_A24, VLB_A25, VLB_A26, VLB_A27;
+[0011sa] unknown symbol:  VLB_A27

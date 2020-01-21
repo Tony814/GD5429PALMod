@@ -1,0 +1,49 @@
+Name     LinearAddrMod;
+PartNo   ATF16V8C;
+Date     1/12/2020;
+Revision 06;
+Designer Me;
+Company  Me;
+Assembly GD5429;
+Location U22;
+Device   g16v8a;
+
+/* *************** INPUT PINS *********************/
+PIN 1  = VLB_A23;	/*                                 */ 
+PIN 2  = VLB_A24;	/*                                 */ 
+PIN 3  = VLB_A25;	/*                                 */ 
+PIN 4  = VLB_A26;	/*                                 */ 
+/*PIN 5  = VLB_A27;	                                   */ 
+PIN 6  = !VLB_ADS;	/*                                 */ 
+PIN 7  = !5429_BS16;	/*                                 */ 
+PIN 8  = !5429_OEL;	/*                                 */ 
+PIN 9  = !5429_OEH;	/*                                 */ 
+PIN 11 = VLB_WR;	/*                                 */ 
+PIN 17 = !5429_EROM;	/*                                 */ 
+PIN 18 = !ISA_SMEMR;	/*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN 12 = 245s_WR;	/* NWR#                           */ 
+PIN 13 = !245s_OEH;	/* NOEH#                           */ 
+PIN 14 = !245s_OEL;	/* NOEL#                           */ 
+PIN 15 = !VLB_BS16;	/* NBS16#                          */ 
+PIN 16 = !27c256_OE;	/* ROMCS#                          */ 
+PIN 19 = !5429_UADDR;/*                                 */ 
+
+
+245s_WR = VLB_WR;
+245s_OEH = 5429_OEH;
+245s_OEL = 5429_OEL;
+
+/* VLB_BS16 = 5429_BS16; */
+VLB_BS16 = 'b'1;
+VLB_BS16.OE = 5429_BS16;
+
+27c256_OE = 5429_EROM & ISA_SMEMR;
+
+5429_UADDR = (!VLB_A23 & !VLB_A24 & !VLB_A25 & !VLB_A26) #	/* Addr < 8MB */
+	      (VLB_A23 & !VLB_A24 & !VLB_A25 & VLB_A26);		/* Addr = 74MB or 78MB */
+
+
+
+

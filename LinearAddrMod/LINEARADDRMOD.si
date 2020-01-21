@@ -1,0 +1,16 @@
+Name     LinearAddrMod;
+PartNo   ATF16V8C;
+Date     1/12/2020;
+Revision 01;
+Designer Me;
+Company  Me;
+Assembly GD5429;
+Location U22;
+Device   g16v8a;
+
+
+ORDER: !27c256_OE, !5429_UADDR, !5429_EROM, !ISA_SMEMR, VLB_A23, VLB_A24, VLB_A25, VLB_A26, VLB_A27; 
+
+
+VECTORS:
+**Z100010

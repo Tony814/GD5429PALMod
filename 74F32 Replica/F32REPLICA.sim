@@ -1,0 +1,68 @@
+%SIGNAL
+PIN  13 = !245s_OEH 
+PIN  14 = !245s_OEL 
+PIN  12 =  245s_WR 
+PIN  16 = !27c256_OE 
+PIN   7 = !5429_BS16 
+PIN  17 = !5429_EROM 
+PIN   9 = !5429_OEH 
+PIN   8 = !5429_OEL 
+PIN  19 = !5429_UADDR 
+PIN  18 = !ISA_SMEMR 
+PIN   1 =  VLB_A23 
+PIN   2 =  VLB_A24 
+PIN   3 =  VLB_A25 
+PIN   4 =  VLB_A26 
+PIN   5 =  VLB_A27 
+PIN   6 = !VLB_ADS 
+PIN  15 = !VLB_BS16 
+PIN  11 =  VLB_WR 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+245s_OEH =>
+    !5429_OEH
+
+245s_OEL =>
+    !5429_OEL
+
+245s_WR =>
+    VLB_WR
+
+27c256_OE =>
+    !5429_EROM & !ISA_SMEMR
+
+5429_UADDR =>
+    !VLB_A24 & !VLB_A25
+
+VLB_BS16 =>
+    1 
+
+VLB_BS16.oe  =>
+    !5429_BS16
+
+245s_OEH.oe  =>
+    1 
+
+245s_OEL.oe  =>
+    1 
+
+245s_WR.oe  =>
+    1 
+
+27c256_OE.oe  =>
+    1 
+
+5429_EROM.oe  =>
+    0 
+
+5429_UADDR.oe  =>
+    1 
+
+ISA_SMEMR.oe  =>
+    0 
+
+%END
