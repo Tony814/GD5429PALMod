@@ -45,8 +45,18 @@ In the manufacturer-built configuration, linear addressing mode is essentially d
    5.  I cut the 'F32 off the board, and removed the remaining pin stubs.
    6.  Then I soldered a 20-pin DIP socket to the board, and verified all connections.
    7.  Once testing was completed, the ATF16V8 was inserted and the project was completed.
+
+## Code
+   
+   The project has 2 components, both written in Atmel WinCUPL.  
+   - The 74F32 Replica code was a fallback in case I could not get the missing logic correct.  It simply replicates the schematic of the existing hardware, assuming that you don't remove anything else from the board.
+   - The LinearAddrMod folder contains the code with the address decoding logic and all of the stuff referenced above.
+   
+   I used WinCUPL from Atmel in the designing and compiling of this project, and a TL866II plus to burn the JEDEC file onto the ATF16V8.
+   
    
 ### Before
 ![before](https://github.com/Tony814/GD5429PALMod/blob/master/BeforeFront.JPG)
+
 ### After
 ![after](https://github.com/Tony814/GD5429PALMod/blob/master/AfterFront.JPG)
