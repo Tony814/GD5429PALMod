@@ -13,9 +13,9 @@ In the manufacturer-built configuration, linear addressing mode is essentially d
 - Details of UADDR#
 
   The UADDR# input into the GD5429 must be asserted during any memory access destined for the chip.  This includes:
-		A0000h-BFFFFh for the traditional VGA/EGA/CGA space,
+`		A0000h-BFFFFh for the traditional VGA/EGA/CGA space,
 		C0000h-C7FFFh for the VGA BIOS, and
-		The linear address mapping (I chose 04A00000h)
+		The linear address mapping (I chose 04A00000h)`
 	That means we can program the PAL to assert UADDR# when (A\[23-27\] == 0) or (A23 == 1 AND A26 == 1).  This solves the issue of the GD5429 responding to "wrapped-around" physical addresses > 16MB, yet still allowing access to the < 1MB window.
 	
 - Driver maps 4MB of physical memory into linear window
@@ -24,8 +24,10 @@ In the manufacturer-built configuration, linear addressing mode is essentially d
 
 - Other signals
 
-  I am not sure why the ADS# signal is brought to the PAL.  
+  I am not sure why the ADS# signal is brought to the PAL.
+  
   I believe that W/R# is brought to the PAL/'F32 simply to buffer it; the CPU has to drive it to the GD5429 as well as 4 separate '245s.
+  
   I am also not certain why BS16#, OEL#, and OEH# are brought out.
 	
 - PAL programming
