@@ -1,7 +1,7 @@
 Name     LinearAddrMod;
 PartNo   ATF16V8C;
 Date     1/12/2020;
-Revision 06;
+Revision 07;
 Designer Me;
 Company  Me;
 Assembly GD5429;
@@ -42,7 +42,9 @@ VLB_BS16.OE = 5429_BS16;
 27c256_OE = 5429_EROM & ISA_SMEMR;
 
 5429_UADDR = (!VLB_A23 & !VLB_A24 & !VLB_A25 & !VLB_A26) #	/* Addr < 8MB */
-	      (VLB_A23 & !VLB_A24 & !VLB_A25 & VLB_A26);		/* Addr = 74MB or 78MB */
+	      (VLB_A23 & !VLB_A24 & VLB_A25 & !VLB_A26);		/* Addr = 42MB or 44MB */
+
+/*(VLB_A23 & !VLB_A24 & !VLB_A25 & VLB_A26);		/* Addr = 74MB or 78MB */
 
 
 

@@ -36,7 +36,7 @@ PIN  11 =  VLB_WR
 
 5429_UADDR =>
     !VLB_A23 & !VLB_A24 & !VLB_A25 & !VLB_A26
-  # VLB_A23 & !VLB_A24 & !VLB_A25 & VLB_A26
+  # VLB_A23 & !VLB_A24 & VLB_A25 & !VLB_A26
 
 VLB_BS16 =>
     1 
