@@ -63,7 +63,7 @@ In the manufacturer-built configuration, linear addressing mode is essentially d
 
 ### Benchmarks
 
-	Unfortunately, WinBench96 does not show any statistically-significant improvement with this mod.
+   Unfortunately, WinBench96 does not show any statistically-significant improvement with this mod.
 
 ![benchmark](Photos/VIDCHART.jpg)
 
