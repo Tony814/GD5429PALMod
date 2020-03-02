@@ -2,7 +2,7 @@
 
 This project replaced the 74F32 quad-OR gate at U22A with a PAL16L8 (or equiv.) at U22.
 
-![whole board](https://github.com/Tony814/GD5429PALMod/blob/master/BeforeWholeBoard.JPG)
+![whole board](Photos/BeforeWholeBoard.JPG)
 
 ### Reason
 In the manufacturer-built configuration, linear addressing mode is essentially disabled for computers with >12MB RAM.  This is because the GD5429 chip itself only decodes A23-A2.  Address lines higher than A23 (> 16MB) are left to external decoding logic.  
@@ -56,7 +56,14 @@ In the manufacturer-built configuration, linear addressing mode is essentially d
    
    
 ### Before
-![before](https://github.com/Tony814/GD5429PALMod/blob/master/BeforeFront.JPG)
+![before](Photos/BeforeFront.JPG)
 
 ### After
-![after](https://github.com/Tony814/GD5429PALMod/blob/master/AfterFront.JPG)
+![after](Photos/AfterFront.JPG)
+
+### Benchmarks
+
+	Unfortunately, WinBench96 does not show any statistically-significant improvement with this mod.
+
+![benchmark](Photos/VIDCHART.jpg)
+
